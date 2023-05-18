@@ -1,0 +1,42 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/ssm895th?useUnicode=true&characterEncoding=UTF-8&tinyInt1isBit=false&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+  # json的全局配置
+  jackson:
+    time-zone: GMT+8
+    date-format: java.text.SimpleDateFormat
+
+##################################################
+##
+## 分页配置
+##
+##################################################
+#pagehelper:
+#  helperDialect: mysql
+#  supportMethodsArguments: true
+
+server:
+  port: 8080
+  servlet:
+    context-path: /ssm895th/
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:mapper/**/*.xml
+  type-aliases-package: com.entity
+
+mybatis:
+  mapper-locations: classpath*:mapper/**/*.xml
+  type-aliases-package: com.entity
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com.dao: debug
+    root: info
