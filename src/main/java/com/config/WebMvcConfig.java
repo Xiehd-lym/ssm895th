@@ -7,7 +7,7 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
- * mvc配置类
+ * mvc配置类 注入拦截器
  */
 @Configuration
 public class WebMvcConfig extends WebMvcConfigurerAdapter {

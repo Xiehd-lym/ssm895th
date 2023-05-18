@@ -5,8 +5,7 @@ import cn.hutool.crypto.digest.DigestUtil;
 public class MD5Util {
     
 	/**
-	 * @param text明文
-	 * @param key密钥
+	 * @param text 明文
 	 * @return 密文
 	 */
 	// 带秘钥加密

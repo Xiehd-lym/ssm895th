@@ -90,7 +90,7 @@
 	    <!-- 全局表为下划线命名设置 true -->
 	    <!-- <property name="dbColumnUnderline" value="true" /> -->
         <property name="metaObjectHandler">
-            <bean class="com.config.DateAutoFillHandler" />
+            <bean class="com.handler.DateAutoFillHandler" />
         </property>
 	</bean>
 

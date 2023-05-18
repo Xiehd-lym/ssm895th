@@ -16,6 +16,10 @@ public class MybatisPlusConfig {
     @Value("${mybatis.mapper-locations}")
     private String mapperLocations;
 
+    /**
+     * todo 分页失效
+     * @return
+     */
     @Bean
     public PaginationInterceptor paginationInterceptor(){
         PaginationInterceptor paginationInterceptor=new PaginationInterceptor();
