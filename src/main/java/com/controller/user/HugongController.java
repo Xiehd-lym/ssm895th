@@ -63,6 +63,7 @@ public class HugongController {
 		if(user==null || !user.getMima().equals(password)) {
 			return R.error("账号或密码不正确");
 		}
+		// token表更新或注入
 		String token = tokenService.generateToken(user.getId(), username,"hugong",  "护工" );
 		return R.ok().put("token", token);
 	}
@@ -89,6 +90,13 @@ public class HugongController {
 	 */
 	@RequestMapping("/logout")
 	public R logout(HttpServletRequest request) {
+		/**
+		 * 退出登录
+		 *
+		 * （1）request.getSession().invalidate()销毁当前会话域中的所有属性： 删除所有用户的Session信息
+		 *
+		 * （2）request.getSession().removeAttribute(“xxxx”)销毁当前会话域中的一个属性：  删除当前用户的Session信息
+		 */
 		request.getSession().invalidate();
 		return R.ok("退出成功");
 	}
